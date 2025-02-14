@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import { UpdateInvoice, DeleteInvoice } from '@/app/ui/invoices/buttons';
-import InvoiceStatus from '@/app/ui/invoices/status';
-import { formatDateToLocal, formatCurrency } from '@/app/lib/utils';
-import { fetchFilteredInvoices } from '@/app/lib/data';
+import Image from "next/image";
+import { UpdateInvoice, DeleteInvoice } from "@/app/ui/invoices/buttons";
+import InvoiceStatus from "@/app/ui/invoices/status";
+import { formatDateToLocal, formatCurrency } from "@/app/lib/utils";
+import { fetchFilteredInvoices } from "@/app/lib/data";
 
 export default async function InvoicesTable({
   query,
@@ -58,19 +58,19 @@ export default async function InvoicesTable({
             <thead className="rounded-lg text-left text-sm font-normal">
               <tr>
                 <th scope="col" className="px-4 py-5 font-medium sm:pl-6">
-                  Customer
+                  顧客名
                 </th>
                 <th scope="col" className="px-3 py-5 font-medium">
-                  Email
+                  メールアドレス
                 </th>
                 <th scope="col" className="px-3 py-5 font-medium">
-                  Amount
+                  請求金額
                 </th>
                 <th scope="col" className="px-3 py-5 font-medium">
-                  Date
+                  日付
                 </th>
                 <th scope="col" className="px-3 py-5 font-medium">
-                  Status
+                  支払い状況
                 </th>
                 <th scope="col" className="relative py-3 pl-6 pr-3">
                   <span className="sr-only">Edit</span>
